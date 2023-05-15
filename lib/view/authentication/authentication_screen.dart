@@ -38,14 +38,6 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                   child: Consumer<AuthenticationProvider>(
                     builder: (context, authenticationProvider, _) => Stack(
                       children: [
-                        Visibility(
-                          visible: authenticationProvider.disableButton,
-                          child: Center(
-                            child: CircularProgressIndicator(
-                              color: theme.primaryColor,
-                            ),
-                          ),
-                        ),
                         Padding(
                           padding: const EdgeInsets.only(top: 20),
                           child: Align(
