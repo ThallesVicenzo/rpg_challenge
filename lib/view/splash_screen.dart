@@ -1,8 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rpg_challenge/shared/constants.dart';
-import '../view_model/routes/named_routes.dart';
+import 'package:rpg_challenge/view_model/providers/splash_screen_provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -27,20 +28,21 @@ class _SplashScreen extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-      body: AnimatedOpacity(
-        opacity: opacity,
-        duration: kThemeAnimationDuration,
-        onEnd: () {
-          if (opacity == 0) {
-            Navigator.pushReplacementNamed(context, NamedRoutes.auth);
-          }
-        },
-        child: Center(
-          child: Image.asset(
-            kSplashImage,
-            scale: 2,
+    return Consumer<SplashScreenProvider>(
+      builder: (context, splashScreenProvider, _) => Scaffold(
+        body: AnimatedOpacity(
+          opacity: opacity,
+          duration: kThemeAnimationDuration,
+          onEnd: () {
+            if (opacity == 0) {
+              splashScreenProvider.retrieveData(context);
+            }
+          },
+          child: Center(
+            child: Image.asset(
+              kSplashImage,
+              scale: 2,
+            ),
           ),
         ),
       ),
