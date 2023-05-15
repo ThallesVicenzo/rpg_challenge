@@ -39,7 +39,7 @@ class CustomTextField extends StatelessWidget {
           suffixIcon: sufixIcon,
           errorText: errorText,
           errorStyle: theme.textTheme.bodySmall!.copyWith(
-            color: theme.primaryColor,
+            color: const Color(0xFFFF2F47),
           ),
           border: theme.inputDecorationTheme.border,
           focusedBorder: theme.inputDecorationTheme.focusedBorder,
