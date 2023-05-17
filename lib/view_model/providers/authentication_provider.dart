@@ -12,7 +12,7 @@ class AuthenticationProvider with ChangeNotifier {
   String? returnEmailError;
   String? returnPasswordError;
   bool hideText = true;
-  bool disableButton = false;
+  bool loadingState = false;
 
   Future<String?> emailErrorText() async {
     String text = textEditingControllers[0].value.text;
@@ -51,15 +51,18 @@ class AuthenticationProvider with ChangeNotifier {
     updateErrorText(
         passwordErrorText: passwordError, emailErrorText: emailError);
     if (emailError == null && passwordError == null) {
-      await ApiRepository.defineUri(
+      loadingState = true;
+
+      await ApiRepository.sendData(
         textEditingControllers[0].value.text,
         textEditingControllers[1].value.text,
       ).then(
         (value) {
-          disableButton = true;
+          notifyListeners();
           LocalDataBaseRepository.callSaveData(value!).whenComplete(
             () {
-              disableButton = false;
+              loadingState = false;
+
               Navigator.pushReplacementNamed(context, NamedRoutes.home);
             },
           );
