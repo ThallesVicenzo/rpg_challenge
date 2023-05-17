@@ -4,12 +4,19 @@ import 'package:rpg_challenge/shared/constants.dart';
 class Apptheme {
   static get appTheme => ThemeData(
         scaffoldBackgroundColor: const Color(0xff861E2B),
+        appBarTheme: AppBarTheme(
+          centerTitle: true,
+          color: Colors.black.withOpacity(0.8),
+        ),
+        progressIndicatorTheme: const ProgressIndicatorThemeData(
+          color: Color(0xFF9E9E9E),
+        ),
         primaryColor: const Color(0xFF9E9E9E),
         iconTheme: const IconThemeData(
           color: Color(0xFF9E9E9E),
           size: 25,
         ),
-        cardColor: const Color(0xFF000000),
+        cardColor: const Color(0xFF000000).withOpacity(0.7),
         inputDecorationTheme: const InputDecorationTheme(
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
