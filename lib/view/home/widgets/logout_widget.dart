@@ -16,6 +16,7 @@ class LogoutWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      backgroundColor: theme.primaryColor,
       title: Text(
         'Tem certeza que deseja fazer logout?',
         style: theme.textTheme.bodyMedium,
