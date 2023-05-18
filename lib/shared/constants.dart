@@ -6,6 +6,6 @@ const kMainBackground = 'assets/images/background 2.jpg';
 
 const kLoading = 'assets/images/loading.png';
 
-const kRules = 'assets/images/rules.jpg';
+const kDetailsBackground = 'assets/images/table.jpg';
 
 const kDefaultFontFamily = 'PermanentMarker-Regular';
