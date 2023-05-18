@@ -34,6 +34,12 @@ class Apptheme {
               ),
             )),
         textTheme: const TextTheme(
+          titleLarge: TextStyle(
+            fontFamily: kDefaultFontFamily,
+            fontSize: 30,
+            color: Color(0xFF9E9E9E),
+            decoration: TextDecoration.underline,
+          ),
           bodyLarge: TextStyle(
             fontFamily: kDefaultFontFamily,
             fontSize: 45,
