@@ -33,4 +33,20 @@ class DioService {
     }
     return null;
   }
+
+  Future<Map<String, dynamic>?> getGameDetails(
+      {required int gameId, required String token}) async {
+    try {
+      final response = await _dio.get(
+        'http://206.189.206.44:8080/api/jogo/$gameId',
+        options: Options(headers: {'Authorization': token}),
+      );
+      if (response.statusCode == 200) {
+        return response.data;
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+    return null;
+  }
 }
