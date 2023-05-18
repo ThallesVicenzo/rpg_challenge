@@ -53,7 +53,7 @@ class AuthenticationProvider with ChangeNotifier {
     if (emailError == null && passwordError == null) {
       loadingState = true;
 
-      await ApiRepository.sendData(
+      await ApiRepository.sendModelAndAwaitToken(
         textEditingControllers[0].value.text,
         textEditingControllers[1].value.text,
       ).then(
