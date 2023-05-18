@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rpg_challenge/shared/theme.dart';
+import 'package:rpg_challenge/view_model/providers/pages_provider.dart';
 import 'package:rpg_challenge/view_model/providers/splash_screen_provider.dart';
 import 'package:rpg_challenge/view_model/routes/named_routes.dart';
 import 'package:rpg_challenge/view_model/routes/routes.dart';
@@ -9,9 +10,8 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
-          create: (context) => SplashScreenProvider(),
-        )
+        ChangeNotifierProvider(create: (context) => SplashScreenProvider()),
+        ChangeNotifierProvider(create: (context) => PagesProvider()),
       ],
       child: const RpgChallenge(),
     ),
