@@ -1,10 +1,10 @@
 import 'games_content.dart';
 
 class GamesListModel {
-  List<GamesContentModel> content;
+  List<GamesContentModel>? content;
 
   GamesListModel({
-    required this.content,
+    this.content,
   });
 
   factory GamesListModel.fromJson(Map<String, dynamic> json) => GamesListModel(
