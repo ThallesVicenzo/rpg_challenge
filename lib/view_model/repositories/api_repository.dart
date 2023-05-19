@@ -16,14 +16,14 @@ class ApiRepository {
     return response;
   }
 
-  static Future<List<GamesContentModel>> convertJsonToGamesContentModel(
+  static Future<List<GamesContentModel>?> convertJsonToGamesContentModel(
       int pagina) async {
     final token = await LocalDataBaseRepository.callRetrieveData();
 
     final Map<String, dynamic>? response =
         await DioService().getGamesList(token: token!, pagina: pagina);
 
-    final List<GamesContentModel> gamesList =
+    final List<GamesContentModel>? gamesList =
         GamesListModel.fromJson(response!).content;
 
     return gamesList;
