@@ -26,9 +26,14 @@ class GameResumeInfo extends StatelessWidget {
               detailsProvider.gameDetails!.urlCapa,
               scale: 1.2,
             ),
-            Text(
-              detailsProvider.gameDetails!.nome,
-              style: theme.textTheme.titleLarge,
+            SizedBox(
+              width: mediaQuery.size.width * 0.9,
+              child: Center(
+                child: Text(
+                  detailsProvider.gameDetails!.nome,
+                  style: theme.textTheme.titleLarge,
+                ),
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -45,7 +50,7 @@ class GameResumeInfo extends StatelessWidget {
             Text(
               '🧙‍♂️ de ${detailsProvider.gameDetails!.minimoJogadores} até ${detailsProvider.gameDetails!.maximoJogadores} pessoas',
               style: theme.textTheme.bodyMedium!
-                  .copyWith(color: theme.primaryColor, fontSize: 20),
+                  .copyWith(color: theme.primaryColor, fontSize: 18),
             ),
             Text(
               '🕒 ${detailsProvider.gameDetails!.duracaoMedia} min',
