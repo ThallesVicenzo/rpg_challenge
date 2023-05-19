@@ -29,9 +29,9 @@ class GameMechanics extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(5.0),
             child: Text(
-              '${detailsProvider.gameDetails!.caracteristicas[0].descricao} ; ${detailsProvider.gameDetails!.caracteristicas[1].descricao} ; ${detailsProvider.gameDetails!.caracteristicas[2].descricao}.',
+              '${detailsProvider.gameDetails!.caracteristicas[0].descricao} , ${detailsProvider.gameDetails!.caracteristicas[1].descricao}.',
               style: theme.textTheme.bodySmall!.copyWith(
-                fontSize: 18,
+                fontSize: 20,
               ),
             ),
           ),
