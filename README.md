@@ -1,5 +1,11 @@
 # rpg_challenge
- Here it is the project Flutter doctor: 
+
+Email: candidato@tabulero.com.br
+Password: 123456
+
+Here it is the project Flutter doctor
+ 
+ 
  Doctor summary (to see all details, run flutter doctor -v):
 [√] Flutter (Channel master, 3.9.0-15.0.pre.10, on Microsoft Windows [versÆo 10.0.19045.2965], locale pt-BR)
 [√] Windows Version (Installed version of Windows is version 10 or higher)
